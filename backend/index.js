@@ -23,7 +23,7 @@ app.use(cors({
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
-app.options('*', cors()); // Enable pre-flight across the board
+// app.options('*', cors()); // Enable pre-flight across the board
 app.use(express.json());
 app.use(cookieParser());
 
