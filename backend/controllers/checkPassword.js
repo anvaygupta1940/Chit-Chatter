@@ -34,7 +34,8 @@ async function checkPassword(req, res) {
 
         const tokenOption = {
             httpOnly: true,
-            secure: true
+            secure: true,
+            sameSite: 'None'
         }
 
         return res.status(200).cookie("token", accessToken, tokenOption).json({
