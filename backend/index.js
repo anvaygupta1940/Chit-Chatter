@@ -20,8 +20,10 @@ const app = express();
 dotenv.config();
 app.use(cors({
     origin: process.env.FRONTEND_URL,
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
     credentials: true
 }));
+app.options('*', cors()); // Enable pre-flight across the board
 app.use(express.json());
 app.use(cookieParser());
 
